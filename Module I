@@ -1,0 +1,81 @@
+
+
+R version 4.5.0 (2025-04-11 ucrt) -- "How About a Twenty-Six"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> getwd()
+[1] "C:/Users/Lenovo/OneDrive/Desktop/Data Analysis Ai and Biotechnology/AI_Omics_Internship_2025/AI_Omics_Internship_2025"
+> dir.create(raw_dat)
+Error: object 'raw_dat' not found
+
+> dir.create("raw_data")
+> dir.create("clean_data")
+> dir.create("results")
+> dir.create("results")
+Warning message:
+  In dir.create("results") : 'results' already exists
+
+> dir.create("scripts")
+> dir.create("tasks")
+> dir.create("plots")
+> data <- read.csv(file.choose())
+> 
+  > data <- read.csv(file.choose())
+> 
+  > data <- read.csv("C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+  In file(file, "rt") :
+  cannot open file 'C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics': Permission denied
+
+> 
+  > > data <- read.csv("C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics")
+Error: unexpected '>' in ">"
+
+> data <- read.csv("C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+  In file(file, "rt") :
+  cannot open file 'C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics': Permission denied
+
+> data <- read.csv("C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics/patient_info")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+  In file(file, "rt") :
+  cannot open file 'C:/Users/Lenovo/OneDrive/Documents/AI and Biotechnology Bioinformatics/patient_info': No such file or directory
+
+> data <- read.csv(file.choose())
+> View(data)
+> str(data)
+'data.frame':	20 obs. of  6 variables:
+  $ patient_id: chr  "P001" "P002" "P003" "P004" ...
+$ age       : int  34 28 45 39 50 30 41 36 55 29 ...
+$ gender    : chr  "Male" "Female" "Female" "Male" ...
+$ diagnosis : chr  "Cancer" "Normal" "Cancer" "Normal" ...
+$ bmi       : num  22.5 20.3 26.7 23.8 27.1 21.9 25.4 24.2 28.6 19.8 ...
+$ smoker    : chr  "Yes" "No" "Yes" "No" ...
+> data$age <- as.numeric(data$age)
+> data$smoker_binary <- ifelse(data$smoker == "Yes", 1, 0)
+> write.csv(data, "clean_data/patient_info_clean.csv", row.names = FALSE)git add scripts/class_Ib.R
+load("workspace.RData")
+load("full_workspace.RData")
+
+
+
+
+
